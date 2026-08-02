@@ -6,7 +6,7 @@ metadata:
 spec:
   serviceAccountName: code-artifact-sa
   containers:
-    - name: dotnet
+    - name: dotnet-build
       image: mcr.microsoft.com/dotnet/sdk:10.0.100-noble
       command:
         - cat
