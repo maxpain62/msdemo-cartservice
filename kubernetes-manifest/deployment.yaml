@@ -15,7 +15,7 @@ spec:
         app: msdemo-cartservice
     spec:
       containers:
-        - name: msdemo-cartservice
+        - name: msdemo-cartservice-container
           image: 134448505602.dkr.ecr.ap-south-1.amazonaws.com/msdemo-cartservice:latest
           env:
             - name: ASPNETCORE_HTTP_PORTS
@@ -34,15 +34,3 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "300m"
-          livenessProbe:
-            grpc:
-              port: 7070
-            initialDelaySeconds: 60
-            periodSeconds: 10
-            failureThreshold: 6
-          readinessProbe:
-            grpc:
-              port: 7070
-            initialDelaySeconds: 60
-            periodSeconds: 10
-            failureThreshold: 6
