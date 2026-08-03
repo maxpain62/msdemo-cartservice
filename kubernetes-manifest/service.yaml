@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: msdemo-cartservice-service
+  labels:
+    app: msdemo-cartservice
+spec:
+  selector:
+    app: msdemo-cartservice
+  ports:
+    - name: grpc
+      port: 7070
+      targetPort: 7070
+  type: ClusterIP
