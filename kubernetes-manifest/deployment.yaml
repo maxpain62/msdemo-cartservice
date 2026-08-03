@@ -37,12 +37,12 @@ spec:
           livenessProbe:
             grpc:
               port: 7070
-            initialDelaySeconds: 30
+            initialDelaySeconds: 60
             periodSeconds: 10
-            failureThreshold: 3
+            failureThreshold: 6
           readinessProbe:
             grpc:
               port: 7070
-            initialDelaySeconds: 30
+            initialDelaySeconds: 60
             periodSeconds: 10
-            failureThreshold: 3
+            failureThreshold: 6
